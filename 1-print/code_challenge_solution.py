@@ -12,7 +12,7 @@ print('this line fails too!')
 print('I think I know how to fix this one!')
 
 #print the name entered by the user
-#You need to store the value returned by the input satement
+#You need to store the value returned by the input statement
 #in a variable
 name=input('What is you name?')
 print(name)
