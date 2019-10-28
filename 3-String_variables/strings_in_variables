@@ -1,0 +1,5 @@
+#you can store strings in variables
+fisrt_name = 'susan'
+
+#The varibale can be used later in the code
+print(fisrt_name)
