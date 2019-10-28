@@ -1,0 +1,15 @@
+# There are a number of functions that you can use on string variables.
+sentence = "the dog is named sammy"
+
+#upper will return the string in uppercase letters.
+print(sentence.upper())
+
+#lower will return the string in lowercase letters.
+print(sentence.lower())
+
+#capitalize will return the string with the fisrt letter uppercase and the rest of the string in lowercase.
+print(sentence.captitalize())
+
+#count will count the number of occurrences of the value specified in the string,
+#in this case how many times the letter 'a' appear.
+print(sentence.captitalize())
