@@ -25,7 +25,7 @@ def parse(text):
 	result_list = [] #把结果依次存入列表
 	for movie in movie_list:
 		mydict = {} # 用字典模式存储，方便转换为json存储
-		mydict['title'] = movie.find('span',class_= 'title').text #每循环出一个movie数据，影片名藏在class属性为title的span标签里
+		mydict['title'] = movie.find('span',class_= 'title').text #每循环出一 个movie数据，影片名藏在class属性为title的span标签里
 		mydict['score'] = movie.find('span',class_='rating_num').text
 		mydict['quote']	= movie.find('span',class_= 'inq').text
 		star = movie.find('div',class_= 'star')
