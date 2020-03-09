@@ -1,9 +1,11 @@
 # 要点：1.用正则表达式全匹配字符串，有时是最直接的方法。
 #       2.写代码时，要先设计好“块”，用几个函数实现步骤+主函数main，最后用main()调用
 #       3.关键在这句<img width="100" alt="霸王别姬" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2561716440.webp" class="">
-#       
+#       4.BeautifulSoup解析得到一个对象，可以很方便的引用标签，如：x.p.a.img,x对象下的P标签的a链接标签下的Img标签，只要是网页源码上有的，可层层下找。
 #
 
+
+# 下载电影图片，每个图片的文件名为电影名，和图片内容对应。
 import re
 import requests
 from bs4 import BeautifulSoup
