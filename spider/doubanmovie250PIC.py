@@ -50,7 +50,7 @@ def printOut(num,PicList):
 
         r= requests.get(fileURL,headers=headers)
     
-        with open("%s.png"%filename,'wb') as f :
+        with open("top%s-%s.png"%((i+1),filename),'wb') as f :
             f.write(r.content)
      
     
