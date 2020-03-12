@@ -1,5 +1,8 @@
 #https://zhuanlan.zhihu.com/p/94402506
 
+# 自动登陆电子税务局，下载电子缴款书
+
+
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from PIL import Image
@@ -157,8 +160,8 @@ def main():
     captcha = discern_captcha(imagef1)
 
     # 登录
-    username = '91330109741011065X'
-    password = 'A1234567'
+    username = '***'
+    password = '***'
     login(username,password,captcha)
     
     #二级界面输入、验证码
