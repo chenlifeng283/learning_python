@@ -42,9 +42,9 @@ def get_captcha(url):
 def discern_captcha(imageF):
 
     #要使用百度云OCR，要注册，得到以下三个信息
-    APP_ID = '18754943'
-    API_KEY = 'ak0PSbLubwuaYCkLnu2hbt1G'
-    SECRET_KEY = 'w6f5SR713SoeT8Ay1ZLafETpz781eX7v'
+    APP_ID = '***'
+    API_KEY = '***'
+    SECRET_KEY = '***'
 
     #初始化对象
     client = AipOcr(APP_ID,API_KEY,SECRET_KEY)
