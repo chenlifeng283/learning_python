@@ -1,0 +1,38 @@
+import re
+import xlrd
+import xlwt
+from xlutils.copy import copy
+
+
+list1 = []
+re1 = r'^\d.+'
+with open('1.txt','r',encoding = "utf-8") as f1:
+	data = f1.readlines()
+	for i in data:
+		if re.match(re1,i):
+			list1.append(re.match(re1,i).group(0))
+		else:
+			continue
+
+print(list1)
+
+'''with open('2.txt','a',encoding = "utf-8") as f2:
+	for q in list1:
+		f2.write(q+"\n")
+'''
+'''a =list1[0]
+print(type(a))
+b = a.split("，")
+print(b)
+'''
+rb = xlrd.open_workbook("2.xls",formatting_info = True)
+wb = copy(rb)
+ws = wb.get_sheet('sh')
+for j in range(len(list1)):
+	a =list1[j].split("，")
+	#for k in range(len(a)):
+	ws.write(j+17,0,a[0])
+	ws.write(j+17,3,a[3])
+wb.save("2.xls")
+
+
