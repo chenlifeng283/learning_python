@@ -17,11 +17,11 @@ import random
 # 获取同一目录下的所有PDF文件的绝对路径
 def getFileName(filedir):
 
-    file_list = [os.path.join(root, filespath) \
-                 for root, dirs, files in os.walk(filedir) \
-                 for filespath in files \
+    file_list = [os.path.join(filedir, filespath) \
+                 for filespath in os.listdir(filedir) \
                  if str(filespath).endswith('pdf')
                  ]
+                 
     return file_list if file_list else []
     
 '''    
@@ -85,20 +85,26 @@ def select_folder():
 # 主函数
 def main():
     time1 = time.time()
+    global file_dir 
     file_dir = select_folder() #os.path.abspath('.') # 存放PDF的原文件夹,os.getcwd
+    global outfile
     outfile = "合并表%s.pdf"%random.randint(1,100) # 输出的PDF文件的名称
     MergePDF(file_dir, outfile)
     time2 = time.time()
     txt.insert("end",'总共耗时：%s s.\n' %(time2 - time1))
-    print_pdf(outfile)
+
+def print_all():
+    print_pdf(os.path.join(file_dir, outfile))
 
 fm_main=Tk()
 fm_main.title("合并PDF文件")
 lab = Label(fm_main,text="合并该程序所在文件夹里的PDF文件！！！\n\n")
 txt = Text(fm_main)
 btn = Button(fm_main,text="开始合并",command=main)
+btn2= Button(fm_main,text="打印",command=print_all)
 
 lab.pack()
 txt.pack()
 btn.pack()
+btn2.pack()
 fm_main.mainloop()
