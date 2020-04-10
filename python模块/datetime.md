@@ -25,6 +25,6 @@ print(dt.strftime(%a %b %H:%M:%S)
   - 加减可以直接用+和-运算符，不过需要导入timedelta这个类，from datetime import timedelta,datetime
   - datetime.now()+timedlta(days=1,hours=10)
  
-***datetime表示的时间需要时区信息才能确定一个特定的时间，否则只能视为本地时间。***
+<font color=green>***datetime表示的时间需要时区信息才能确定一个特定的时间，否则只能视为本地时间。***</font>
 
 ***如果要存储datetime，最佳方法是将其转换为timestamp再存储，因为timestamp的值与时区完全无关。***
