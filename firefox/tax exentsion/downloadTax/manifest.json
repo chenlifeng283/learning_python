@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "download_tax",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
+
+// taxLogin.js代码中有juqery,先引入jquery
+  "content_scripts":[{
+    "matches":["<all_urls>"],
+    "js":["jquery-3.5.1.min.js"]
+  }
+],
+
+
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+
+}
