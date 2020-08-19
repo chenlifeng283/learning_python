@@ -1,0 +1,2 @@
+- [火狐插件基础脑图](http://naotu.baidu.com/file/42da1fbb4de02d8d275d732e702dce9a?token=e4518af4afd14232)
+- [开发文档](https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Walkthrough)
