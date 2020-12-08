@@ -79,6 +79,7 @@ def companyName():
 	#把第4、16列每个元素处理成list,并相加成新列表
 	#把得到的新Series添加到新列（这里实际没赋值加上去）
 	#以0列为key,新列为value,to_dict()
+        #这里搞的这么复杂，其实只要用构造字典的特性 dict(zip(list1,list2))一下搞定。
 	
 
 	mydic2 = {}
